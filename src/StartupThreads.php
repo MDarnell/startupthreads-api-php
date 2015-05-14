@@ -35,10 +35,13 @@ class StartupThreads
     /**
      * Create a new instance
      *
+     * @param string $api_token The user WhenIWork API token
      * @param array $options Allows you to set the `headers` and the `endpoint`
      */
-    function __construct($options = [])
+    function __construct($api_token = null, $options = [])
     {
+        $this->api_token = $api_token;
+
         if (!empty($options['endpoint'])) {
             $this->setEndpoint($options['endpoint']);
         }

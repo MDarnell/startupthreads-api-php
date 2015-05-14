@@ -22,16 +22,16 @@ You will then need to:
 * run `composer install` to get these dependencies added to your vendor directory
 * add the Composer autoloader to your application with this line: `require("vendor/autoload.php")`
 
-Examples (TODO: Update Examples)
+Examples
 --------
 
-List items (/items.json method)
+###List items (/items.json method)
 
 ```php
 $st = new StartupThreads('api-token-here');
 print_r($st->get('items.json'));
 ```
-Create an Inventory Shipment (/inventory_shipments method)
+###Create an Inventory Shipment (/inventory_shipments method)
 
 ```php
 $st = new StartupThreads('api-token-here');

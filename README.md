@@ -31,3 +31,30 @@ List items (/items.json method)
 $st = new StartupThreads('api-token-here');
 print_r($st->get('items.json'));
 ```
+Create an Inventory Shipment (/inventory_shipments method)
+
+```php
+$st = new StartupThreads('api-token-here');
+$result = $st->create('/inventory_shipments', array(
+	'inventory_shipment' => array(
+		payment_method'		=>	"account_balance",
+		'test_mode'			=>	1
+		'line_items' => array(
+			array (
+				"item_id"	=>	"dfsea4rs",
+				"size"		=>	"MS",
+				"quantity"	=>	3
+			)
+		),
+		'address' => array (
+			"name"			=>	"Frank Denbow",
+			"street1"		=>	"902 Broadway",
+			"city"			=>	"New York",
+			"state"			=>	"New York",
+		    "zip"			=>	"10010",
+		    "country"		=>	"US"
+		)
+	);
+));
+print_r($result);
+```
